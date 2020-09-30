@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">TestProject</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+
+    <string name="name">Name</string>
+    <string name="family">Family</string>
+    <string name="email">Email</string>
+    <string name="pass">Password</string>
+    <string name="avatar">Avatar</string>
+
+    <string name="toast_login_fail">Wrong Email or pass</string>
+    <string name="toast_login_success">Login is success</string>
+
+    <string name="toast_reg_success">Register is success</string>
+    <string name="toast_reg_fail">Register is failed</string>
+    <string name="toast_reg_fail_email">This Email Address was registered</string>
+
+    <string name="toast_fill_all_data">Fill data please ...</string>
+
+
+</resources>

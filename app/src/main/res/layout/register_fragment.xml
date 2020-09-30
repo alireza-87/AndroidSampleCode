@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.midnightgeek.testproject.ui.RegisterFragmentViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:id="@+id/prgBar"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/imgAvatar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:onClick="@{(view) -> viewmodel.onClick(1)}"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImage="@drawable/holder_photo"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:roundWithOverlayColor="@color/background"
+            fresco:roundedCornerRadius="4dp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtName"
+            android:hint="@string/name"
+            android:layout_margin="8dp"
+            android:inputType="text"
+            style="@style/editText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtFamily"
+            android:hint="@string/family"
+            android:inputType="text"
+            style="@style/editText"
+            android:layout_margin="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtEmail"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            style="@style/editText"
+            android:layout_margin="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtFamily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtPass"
+            android:hint="@string/pass"
+            android:inputType="textPassword"
+            style="@style/editText"
+            android:layout_margin="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            style="@style/button_black"
+            android:onClick="@{(view) -> viewmodel.onClick(2)}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
